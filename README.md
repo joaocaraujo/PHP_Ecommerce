@@ -1,6 +1,6 @@
 # E-commerce project
 
-The E-commerce project was developed to train my skills in the php language.
+Welcome to my first repository on Github, this is an E-commerce project developed to train my skills in the php language and other tools.
 
-.
-Template used in the project: [Almsaeed Studio](https://almsaeedstudio.com)
+
+In this project a front-end template was used: [Almsaeed Studio](https://almsaeedstudio.com)
