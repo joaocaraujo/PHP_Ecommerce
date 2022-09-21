@@ -8,6 +8,8 @@ use \Hcode\Model;
 class User extends Model {
     
     const SESSION = "User";
+    const SECRET = "HcodePhp7_Secret";
+    const SECRET_IV = "HcodePhp7_Secret_IV";
 
     protected $fields = [
         "iduser", "idperson", "deslogin", "despassword",
@@ -136,6 +138,50 @@ class User extends Model {
         ));
     }
 
-}
+    public static function getForgot($email)
+    {
+        $sql = new Sql();
 
-?>
+        $results = $sql->select(" SELECT * FROM tb_persons a 
+        INNER JOIN tb_users b USING(idperson)
+        WHERE a.desemail = :email;
+        ", array(
+            ":email"=>$email
+        ));
+
+        if(count($results) === 0)
+        {
+            throw new \Exception("Não foi possível recuperar a senha.");
+        }
+        else
+        {
+            $data = $results[0];
+
+            $results2 = $sql->select("CALL sp_userspasswordsrecoveries_create(:iduser, :desip)", array(
+                ":iduser" => $data['iduser'],
+                ":desip" => $_SERVER['REMOTE_ADDR']
+            ));
+
+            if(count($results2) === 0)
+            {
+                throw new \Exception("Não foi possível recuperar a senha.");
+            }
+            else
+            {
+                $dataRecovery = $results2[0];
+
+                $code = openssl_encrypt($dataRecovery['idrecovery'], 'AES-128-CBC', pack("a16", User::SECRET), 0, pack("a16", User::SECRET_IV));
+
+				$code = base64_encode($code);
+
+                $link = "http://www.ecommerce.com.br/admin/forgot/reset?code=%code";
+
+
+
+            }
+        }
+        
+    }
+
+
+} ?>

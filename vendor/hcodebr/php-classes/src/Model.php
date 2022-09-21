@@ -2,6 +2,8 @@
 
 namespace Hcode;
 
+use Hcode\DB\Sql;
+
 class Model {
 
     private $values = [];
@@ -39,10 +41,12 @@ class Model {
         return $this->values;
     }
 
+
+
+
+
+
+
+
 }
-
-
-
-
-
 ?>
