@@ -8,6 +8,7 @@ use \Hcode\Mailer;
 
 class Product extends Model {
 
+
 	public static function listAll()
 	{
 
@@ -31,6 +32,8 @@ class Product extends Model {
 		return $list;
 
 	}
+
+
 
 	public function save()
 	{

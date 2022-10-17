@@ -10,10 +10,14 @@ use \Hcode\Model\Order;
 use \Hcode\Model\OrderStatus;
 
 $app->get('/', function() {
-    
-	$page = new Hcode\Page();
 
-	$page->setTpl("index");
+	$products = Product::listAll();
+
+	$page = new Page();
+
+	$page->setTpl("index", [
+		'products'=>Product::checkList($products)
+	]);
 
 });
 
