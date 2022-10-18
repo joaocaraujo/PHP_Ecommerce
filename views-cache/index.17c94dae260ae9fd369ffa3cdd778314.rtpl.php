@@ -95,30 +95,37 @@
                         </div>
                         
                         <h2><a href="/products/<?php echo htmlspecialchars( $value1["desurl"], ENT_COMPAT, 'UTF-8', FALSE ); ?>"><?php echo htmlspecialchars( $value1["desproduct"], ENT_COMPAT, 'UTF-8', FALSE ); ?></a></h2>
-                                
+                        
                         <div class="product-carousel-price">
                             <ins>R$<?php echo formatPrice($value1["vlprice"]); ?></ins>
                         </div> 
                     </div>
                     <?php } ?>
-                    <div class="brands-area">
-                    <div class="zigzag-bottom"></div>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="brand-wrapper">
-                                    <div class="brand-list">
-                                        <img src="/res/site/img/brand1.png" alt="">
-                                        <img src="/res/site/img/brand2.png" alt="">
-                                        <img src="/res/site/img/brand3.png" alt="">
-                                        <img src="/res/site/img/brand4.png" alt="">
-                                        <img src="/res/site/img/brand5.png" alt="">
-                                        <img src="/res/site/img/brand6.png" alt="">
-                                        <img src="/res/site/img/brand1.png" alt="">
-                                        <img src="/res/site/img/brand2.png" alt="">                            
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div> <!-- End brands area -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div> <!-- End main content area -->
+
+<div class="brands-area">
+<div class="zigzag-bottom"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="brand-wrapper">
+                <div class="brand-list">
+                    <img src="/res/site/img/brand1.png" alt="">
+                    <img src="/res/site/img/brand2.png" alt="">
+                    <img src="/res/site/img/brand3.png" alt="">
+                    <img src="/res/site/img/brand4.png" alt="">
+                    <img src="/res/site/img/brand5.png" alt="">
+                    <img src="/res/site/img/brand6.png" alt="">
+                    <img src="/res/site/img/brand1.png" alt="">
+                    <img src="/res/site/img/brand2.png" alt="">                            
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div> <!-- End brands area -->
