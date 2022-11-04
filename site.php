@@ -390,7 +390,7 @@ $app->post("/profile", function(){
 	$_POST['deslogin'] = $_POST['desemail'];
 
 	$user->setData($_POST);
-	$user->save();
+	$user->update();
 
 	User::setSuccess("Dados alterados com sucesso :)");
 
